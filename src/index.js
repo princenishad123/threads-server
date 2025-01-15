@@ -26,7 +26,11 @@ app.use(express.json())
 
 // routers
 app.use("/api/v1", router)
-app.use('/api/v1',postRouter)
+app.use('/api/v1', postRouter)
+
+app.use("/",(req,res)=>{
+    res.send("Welcome to the API")
+})
 
 
 server.listen(PORT, () => {
